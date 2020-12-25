@@ -146,6 +146,111 @@ namespace OOP6
             ~Storage() { }
         };
 
+        private void paint_Figure(Color name, ref Storage stg, int index)
+        {
+            Pen pen = new Pen(name, 3);
+            SolidBrush figurefillcolor;
+            if (!storag.check_empty(index))
+            {
+                figurefillcolor = new SolidBrush(stg.objects[index].fillcolor);
+                if (storag.objects[index] as Circle != null)
+                {
+                    Circle circle = storag.objects[index] as Circle;
+                    paint_box.CreateGraphics().DrawEllipse(pen, circle.x, circle.y, circle.rad * 2, circle.rad * 2);
+                    paint_box.CreateGraphics().FillEllipse(figurefillcolor, circle.x, circle.y, circle.rad * 2, circle.rad * 2);
+                    stg.objects[index].setColor(name);
+                }
+                else
+                {
+                    if (storag.objects[index] as Square != null)
+                    {
+                        Square square = storag.objects[index] as Square;
+                        paint_box.CreateGraphics().DrawRectangle(pen, square.x, square.y, square.x2, square.y2);
+                        paint_box.CreateGraphics().FillRectangle(figurefillcolor, square.x, square.y, square.x2, square.y2);
+                        stg.objects[index].setColor(name);
+                    }
+                    else
+                    {
+                        if (storag.objects[index] as Line != null)
+                        {
+                            Line line = storag.objects[index] as Line;
+                            paint_box.CreateGraphics().DrawLine(pen, line.x - 1, line.y, line.x2 + 1, line.y2);
+                            paint_box.CreateGraphics().FillRectangle(figurefillcolor, line.x, line.y, line.lenght + 30, line.wight);
+                            stg.objects[index].setColor(name);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void remove_selection_circle(ref Storage stg)
+        {   // Снимает выделение у всех элементов хранилища
+            for (int i = 0; i < k; ++i)
+            {
+                if (!storag.check_empty(i))
+                {
+                    paint_Figure(Color.Black, ref storag, i);
+                }
+            }
+        }
+
+        private void remove_selected_circle(ref Storage stg)
+        {   // Удаляет выделенные элементы из хранилища
+            for (int i = 0; i < k; ++i)
+            {
+                if (!storag.check_empty(i))
+                {
+                    if (storag.objects[i].getColor() == Color.Blue)
+                    {
+                        storag.delete_object(i);
+                    }
+                }
+            }
+        }
+
+        private int check_figure(ref Storage stg, int size, int x, int y)
+        {   // Проверяет есть ли уже фигура с такими же координатами в хранилище
+            if (stg.occupied(size) != 0)
+            {
+                for (int i = 0; i < size; ++i)
+                {
+                    if (!stg.check_empty(i))
+                    {   // Если под i индексом в хранилище есть объект
+                        if (stg.objects[i] as Circle != null)
+                        {   // Если в хранилище круг
+                            Circle circle = stg.objects[i] as Circle;
+                            if (((x - circle.x - circle.rad) * (x - circle.x - circle.rad) +
+                                (y - circle.y - circle.rad) * (y - circle.y - circle.rad))
+                                < (circle.rad * circle.rad))
+                                return i;
+                        }
+                        else
+                        {
+                            if (stg.objects[i] as Line != null)
+                            {   // Если в хранилище отрезок
+                                Line line = stg.objects[i] as Line;
+                                if (line.x <= x && x <= (line.x + line.lenght) && (line.y - 2) <= y &&
+                                    y <= (line.y + line.wight))
+                                    return i;
+                            }
+                            else
+                            {
+                                if (stg.objects[i] as Square != null)
+                                {   // Если в хранилище квадрат
+                                    Square square = stg.objects[i] as Square;
+                                    if (square.x <= x && x <= (square.x + square.size) &&
+                                        square.y <= y && y <= (square.y + square.size))
+                                        return i;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+            return -1;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
