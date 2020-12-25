@@ -28,87 +28,202 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.panel2.SuspendLayout();
+            this.PanelD = new System.Windows.Forms.Panel();
+            this.panelF = new System.Windows.Forms.Panel();
+            this.LineRB = new System.Windows.Forms.RadioButton();
+            this.SquareRB = new System.Windows.Forms.RadioButton();
+            this.CircleRB = new System.Windows.Forms.RadioButton();
+            this.panelC = new System.Windows.Forms.Panel();
+            this.PurpleRB = new System.Windows.Forms.RadioButton();
+            this.MaroonRB = new System.Windows.Forms.RadioButton();
+            this.PinkRB = new System.Windows.Forms.RadioButton();
+            this.ExitB = new System.Windows.Forms.Button();
+            this.ClearstB = new System.Windows.Forms.Button();
+            this.ClearB = new System.Windows.Forms.Button();
+            this.BiggerB = new System.Windows.Forms.Button();
+            this.smallerB = new System.Windows.Forms.Button();
+            this.panelF.SuspendLayout();
+            this.panelC.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // PanelD
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Info;
-            this.panel1.Location = new System.Drawing.Point(374, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 426);
-            this.panel1.TabIndex = 0;
+            this.PanelD.BackColor = System.Drawing.SystemColors.Info;
+            this.PanelD.Location = new System.Drawing.Point(202, 12);
+            this.PanelD.Name = "PanelD";
+            this.PanelD.Size = new System.Drawing.Size(507, 426);
+            this.PanelD.TabIndex = 0;
             // 
-            // panel2
+            // panelF
             // 
-            this.panel2.Controls.Add(this.radioButton3);
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 4;
+            this.panelF.Controls.Add(this.LineRB);
+            this.panelF.Controls.Add(this.SquareRB);
+            this.panelF.Controls.Add(this.CircleRB);
+            this.panelF.Location = new System.Drawing.Point(12, 12);
+            this.panelF.Name = "panelF";
+            this.panelF.Size = new System.Drawing.Size(180, 100);
+            this.panelF.TabIndex = 4;
             // 
-            // radioButton1
+            // LineRB
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(4, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.LineRB.AutoSize = true;
+            this.LineRB.Location = new System.Drawing.Point(4, 68);
+            this.LineRB.Name = "LineRB";
+            this.LineRB.Size = new System.Drawing.Size(57, 17);
+            this.LineRB.TabIndex = 2;
+            this.LineRB.TabStop = true;
+            this.LineRB.Text = "Линия";
+            this.LineRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // SquareRB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(3, 45);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.SquareRB.AutoSize = true;
+            this.SquareRB.Location = new System.Drawing.Point(3, 45);
+            this.SquareRB.Name = "SquareRB";
+            this.SquareRB.Size = new System.Drawing.Size(67, 17);
+            this.SquareRB.TabIndex = 1;
+            this.SquareRB.TabStop = true;
+            this.SquareRB.Text = "Квадрат";
+            this.SquareRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // CircleRB
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(4, 68);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.CircleRB.AutoSize = true;
+            this.CircleRB.Location = new System.Drawing.Point(4, 22);
+            this.CircleRB.Name = "CircleRB";
+            this.CircleRB.Size = new System.Drawing.Size(48, 17);
+            this.CircleRB.TabIndex = 0;
+            this.CircleRB.TabStop = true;
+            this.CircleRB.Text = "Круг";
+            this.CircleRB.UseVisualStyleBackColor = true;
+            // 
+            // panelC
+            // 
+            this.panelC.Controls.Add(this.PurpleRB);
+            this.panelC.Controls.Add(this.MaroonRB);
+            this.panelC.Controls.Add(this.PinkRB);
+            this.panelC.Location = new System.Drawing.Point(12, 118);
+            this.panelC.Name = "panelC";
+            this.panelC.Size = new System.Drawing.Size(184, 100);
+            this.panelC.TabIndex = 5;
+            // 
+            // PurpleRB
+            // 
+            this.PurpleRB.AutoSize = true;
+            this.PurpleRB.Location = new System.Drawing.Point(4, 68);
+            this.PurpleRB.Name = "PurpleRB";
+            this.PurpleRB.Size = new System.Drawing.Size(91, 17);
+            this.PurpleRB.TabIndex = 2;
+            this.PurpleRB.TabStop = true;
+            this.PurpleRB.Text = "Фиолетовый";
+            this.PurpleRB.UseVisualStyleBackColor = true;
+            // 
+            // MaroonRB
+            // 
+            this.MaroonRB.AutoSize = true;
+            this.MaroonRB.Location = new System.Drawing.Point(4, 46);
+            this.MaroonRB.Name = "MaroonRB";
+            this.MaroonRB.Size = new System.Drawing.Size(70, 17);
+            this.MaroonRB.TabIndex = 1;
+            this.MaroonRB.TabStop = true;
+            this.MaroonRB.Text = "Красный";
+            this.MaroonRB.UseVisualStyleBackColor = true;
+            // 
+            // PinkRB
+            // 
+            this.PinkRB.AutoSize = true;
+            this.PinkRB.Location = new System.Drawing.Point(4, 22);
+            this.PinkRB.Name = "PinkRB";
+            this.PinkRB.Size = new System.Drawing.Size(70, 17);
+            this.PinkRB.TabIndex = 0;
+            this.PinkRB.TabStop = true;
+            this.PinkRB.Text = "Розовый";
+            this.PinkRB.UseVisualStyleBackColor = true;
+            // 
+            // ExitB
+            // 
+            this.ExitB.Location = new System.Drawing.Point(15, 224);
+            this.ExitB.Name = "ExitB";
+            this.ExitB.Size = new System.Drawing.Size(110, 62);
+            this.ExitB.TabIndex = 6;
+            this.ExitB.Text = "Вывод из хранилища";
+            this.ExitB.UseVisualStyleBackColor = true;
+            // 
+            // ClearstB
+            // 
+            this.ClearstB.Location = new System.Drawing.Point(45, 301);
+            this.ClearstB.Name = "ClearstB";
+            this.ClearstB.Size = new System.Drawing.Size(110, 65);
+            this.ClearstB.TabIndex = 7;
+            this.ClearstB.Text = "Очищение хранилища";
+            this.ClearstB.UseVisualStyleBackColor = true;
+            // 
+            // ClearB
+            // 
+            this.ClearB.Location = new System.Drawing.Point(85, 382);
+            this.ClearB.Name = "ClearB";
+            this.ClearB.Size = new System.Drawing.Size(111, 56);
+            this.ClearB.TabIndex = 8;
+            this.ClearB.Text = "Полная очистка";
+            this.ClearB.UseVisualStyleBackColor = true;
+            // 
+            // BiggerB
+            // 
+            this.BiggerB.Location = new System.Drawing.Point(715, 12);
+            this.BiggerB.Name = "BiggerB";
+            this.BiggerB.Size = new System.Drawing.Size(81, 23);
+            this.BiggerB.TabIndex = 9;
+            this.BiggerB.Text = "Увелечение";
+            this.BiggerB.UseVisualStyleBackColor = true;
+            // 
+            // smallerB
+            // 
+            this.smallerB.Location = new System.Drawing.Point(715, 51);
+            this.smallerB.Name = "smallerB";
+            this.smallerB.Size = new System.Drawing.Size(81, 23);
+            this.smallerB.TabIndex = 10;
+            this.smallerB.Text = "Уменьшение";
+            this.smallerB.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.smallerB);
+            this.Controls.Add(this.BiggerB);
+            this.Controls.Add(this.ClearB);
+            this.Controls.Add(this.ClearstB);
+            this.Controls.Add(this.ExitB);
+            this.Controls.Add(this.panelC);
+            this.Controls.Add(this.panelF);
+            this.Controls.Add(this.PanelD);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelF.ResumeLayout(false);
+            this.panelF.PerformLayout();
+            this.panelC.ResumeLayout(false);
+            this.panelC.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel PanelD;
+        private System.Windows.Forms.Panel panelF;
+        private System.Windows.Forms.RadioButton LineRB;
+        private System.Windows.Forms.RadioButton SquareRB;
+        private System.Windows.Forms.RadioButton CircleRB;
+        private System.Windows.Forms.Panel panelC;
+        private System.Windows.Forms.RadioButton PurpleRB;
+        private System.Windows.Forms.RadioButton MaroonRB;
+        private System.Windows.Forms.RadioButton PinkRB;
+        private System.Windows.Forms.Button ExitB;
+        private System.Windows.Forms.Button ClearstB;
+        private System.Windows.Forms.Button ClearB;
+        private System.Windows.Forms.Button BiggerB;
+        private System.Windows.Forms.Button smallerB;
     }
 }
 
