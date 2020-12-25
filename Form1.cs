@@ -394,7 +394,7 @@ namespace OOP6
                 {
                     if (storag.objects[i].getColor() == Color.White)
                     {
-                        storag.objects[i].fillcolor = Color.Aqua;
+                        storag.objects[i].fillcolor = Color.Pink;
                         paint_Figure(Color.Black, ref storag, i);
                     }
                 }
@@ -408,7 +408,7 @@ namespace OOP6
                 if (!storag.check_empty(i))
                     if (storag.objects[i].getColor() == Color.White)
                     {
-                        storag.objects[i].fillcolor = Color.Green;
+                        storag.objects[i].fillcolor = Color.Maroon;
                         paint_Figure(Color.Black, ref storag, i);
                     }
             }
@@ -422,7 +422,7 @@ namespace OOP6
                 {
                     if (storag.objects[i].getColor() == Color.White)
                     {
-                        storag.objects[i].fillcolor = Color.Red;
+                        storag.objects[i].fillcolor = Color.Purple;
                         paint_Figure(Color.Black, ref storag, i);
                     }
                 }
@@ -575,5 +575,22 @@ namespace OOP6
                 }
             }
         }
+
+        private void smallerB_Click(object sender, EventArgs e)
+        {
+            size = -5;
+            changesize(ref storag, size);
+            PanelD.Refresh();
+            paint_all(ref storag);
+        }
+
+        private void BiggerB_Click(object sender, EventArgs e)
+        {
+            size = 5;
+            changesize(ref storag, size);
+            PanelD.Refresh();
+            paint_all(ref storag);
+        }
+
     }
 }

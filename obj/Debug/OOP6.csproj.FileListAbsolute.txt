@@ -1,0 +1,10 @@
+C:\Users\TombFuck\source\repos\OOP6\OOP6\bin\Debug\OOP6.exe.config
+C:\Users\TombFuck\source\repos\OOP6\OOP6\bin\Debug\OOP6.exe
+C:\Users\TombFuck\source\repos\OOP6\OOP6\bin\Debug\OOP6.pdb
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.csprojAssemblyReference.cache
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.Form1.resources
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.Properties.Resources.resources
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.csproj.GenerateResource.cache
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.csproj.CoreCompileInputs.cache
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.exe
+C:\Users\TombFuck\source\repos\OOP6\OOP6\obj\Debug\OOP6.pdb

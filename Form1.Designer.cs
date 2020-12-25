@@ -42,6 +42,8 @@
             this.ClearB = new System.Windows.Forms.Button();
             this.BiggerB = new System.Windows.Forms.Button();
             this.smallerB = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelF.SuspendLayout();
             this.panelC.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +55,11 @@
             this.PanelD.Name = "PanelD";
             this.PanelD.Size = new System.Drawing.Size(507, 426);
             this.PanelD.TabIndex = 0;
+            this.PanelD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelD_MouseClick);
             // 
             // panelF
             // 
+            this.panelF.Controls.Add(this.label1);
             this.panelF.Controls.Add(this.LineRB);
             this.panelF.Controls.Add(this.SquareRB);
             this.panelF.Controls.Add(this.CircleRB);
@@ -67,7 +71,7 @@
             // LineRB
             // 
             this.LineRB.AutoSize = true;
-            this.LineRB.Location = new System.Drawing.Point(4, 68);
+            this.LineRB.Location = new System.Drawing.Point(7, 68);
             this.LineRB.Name = "LineRB";
             this.LineRB.Size = new System.Drawing.Size(57, 17);
             this.LineRB.TabIndex = 2;
@@ -78,7 +82,7 @@
             // SquareRB
             // 
             this.SquareRB.AutoSize = true;
-            this.SquareRB.Location = new System.Drawing.Point(3, 45);
+            this.SquareRB.Location = new System.Drawing.Point(7, 45);
             this.SquareRB.Name = "SquareRB";
             this.SquareRB.Size = new System.Drawing.Size(67, 17);
             this.SquareRB.TabIndex = 1;
@@ -89,7 +93,7 @@
             // CircleRB
             // 
             this.CircleRB.AutoSize = true;
-            this.CircleRB.Location = new System.Drawing.Point(4, 22);
+            this.CircleRB.Location = new System.Drawing.Point(7, 22);
             this.CircleRB.Name = "CircleRB";
             this.CircleRB.Size = new System.Drawing.Size(48, 17);
             this.CircleRB.TabIndex = 0;
@@ -99,6 +103,7 @@
             // 
             // panelC
             // 
+            this.panelC.Controls.Add(this.label2);
             this.panelC.Controls.Add(this.PurpleRB);
             this.panelC.Controls.Add(this.MaroonRB);
             this.panelC.Controls.Add(this.PinkRB);
@@ -117,6 +122,7 @@
             this.PurpleRB.TabStop = true;
             this.PurpleRB.Text = "Фиолетовый";
             this.PurpleRB.UseVisualStyleBackColor = true;
+            this.PurpleRB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PurpleRB_MouseClick);
             // 
             // MaroonRB
             // 
@@ -128,6 +134,7 @@
             this.MaroonRB.TabStop = true;
             this.MaroonRB.Text = "Красный";
             this.MaroonRB.UseVisualStyleBackColor = true;
+            this.MaroonRB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MaroonRB_MouseClick);
             // 
             // PinkRB
             // 
@@ -139,6 +146,7 @@
             this.PinkRB.TabStop = true;
             this.PinkRB.Text = "Розовый";
             this.PinkRB.UseVisualStyleBackColor = true;
+            this.PinkRB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PinkRB_MouseClick);
             // 
             // ExitB
             // 
@@ -148,6 +156,8 @@
             this.ExitB.TabIndex = 6;
             this.ExitB.Text = "Вывод из хранилища";
             this.ExitB.UseVisualStyleBackColor = true;
+            this.ExitB.Click += new System.EventHandler(this.ExitB_Click);
+            this.ExitB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             // 
             // ClearstB
             // 
@@ -157,6 +167,8 @@
             this.ClearstB.TabIndex = 7;
             this.ClearstB.Text = "Очищение хранилища";
             this.ClearstB.UseVisualStyleBackColor = true;
+            this.ClearstB.Click += new System.EventHandler(this.ClearstB_Click);
+            this.ClearstB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             // 
             // ClearB
             // 
@@ -166,6 +178,8 @@
             this.ClearB.TabIndex = 8;
             this.ClearB.Text = "Полная очистка";
             this.ClearB.UseVisualStyleBackColor = true;
+            this.ClearB.Click += new System.EventHandler(this.ClearB_Click);
+            this.ClearB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             // 
             // BiggerB
             // 
@@ -175,6 +189,7 @@
             this.BiggerB.TabIndex = 9;
             this.BiggerB.Text = "Увелечение";
             this.BiggerB.UseVisualStyleBackColor = true;
+            this.BiggerB.Click += new System.EventHandler(this.BiggerB_Click);
             // 
             // smallerB
             // 
@@ -184,6 +199,25 @@
             this.smallerB.TabIndex = 10;
             this.smallerB.Text = "Уменьшение";
             this.smallerB.UseVisualStyleBackColor = true;
+            this.smallerB.Click += new System.EventHandler(this.smallerB_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Фигуры:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Цвета:";
             // 
             // Form1
             // 
@@ -200,6 +234,7 @@
             this.Controls.Add(this.PanelD);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.panelF.ResumeLayout(false);
             this.panelF.PerformLayout();
             this.panelC.ResumeLayout(false);
@@ -224,6 +259,8 @@
         private System.Windows.Forms.Button ClearB;
         private System.Windows.Forms.Button BiggerB;
         private System.Windows.Forms.Button smallerB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
